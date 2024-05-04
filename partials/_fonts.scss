@@ -1,0 +1,9 @@
+/* Font variabler */
+$raleway: "Raleway", sans-serif;
+
+
+    /*Global text styling */
+h1 {
+    font-family: #{$raleway};
+    font-size: 30px;
+}

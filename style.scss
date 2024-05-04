@@ -1,0 +1,76 @@
+@import 'partials/fonts';
+@import 'partials/colors';
+@import 'partials/mixin';
+@import 'partials/buttons';
+
+
+body {
+    font-family: $raleway;
+    background: $baggrund;
+    color: white;
+}
+
+header {
+    @include flex-center;
+
+    img {
+        padding: 15px 0;
+    }
+}
+
+.intro-section {
+    @include flex-center;
+    flex-direction: column;
+
+    .intro-container {
+        display: flex;
+        padding-top: 30px;
+        gap: 100px;
+
+        .text-content {
+            width: 40vw;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            .red-word {
+                color: $roed;
+            }
+
+            h1 {
+                white-space: nowrap;
+
+                object {
+                    display: block;
+                    margin-top: 2px; 
+                    width: 90px;
+                    height: auto;
+                    padding-left: 67px;
+                }
+
+            }
+
+     
+
+            p {
+                line-height: 38px;
+                width: 80%;
+                margin-top: 0;
+            }
+        }
+
+        img {
+            width: 40%;
+        }
+    }
+}
+
+
+// Mobil styling forside //
+@media only screen and (max-width: 1010px)  {
+    .intro-section {
+        .intro-container {
+            flex-direction: column;
+        }
+    }
+}

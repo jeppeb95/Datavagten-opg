@@ -1,0 +1,95 @@
+/* Font variabler */
+/*Global text styling */
+h1 {
+  font-family: Raleway, sans-serif;
+  font-size: 30px;
+}
+
+/* Farve variabler */
+/*Poisition variabler */
+/* Global button styling */
+.custom-button {
+  background: transparent;
+  display: inline-block;
+  cursor: pointer;
+  width: 182px;
+  height: 82px;
+  position: relative;
+  transition: transform 0.2s ease;
+  background-image: url("img/svg/roedsky.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-bottom: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.custom-button:hover {
+  transform: scale(1.1);
+}
+.custom-button span {
+  color: rgb(255, 255, 255);
+  font-weight: 800;
+  font-size: 16px;
+  position: relative;
+  z-index: 1;
+  display: block;
+  padding-top: 25px;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background: #01122C;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header img {
+  padding: 15px 0;
+}
+
+.intro-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.intro-section .intro-container {
+  display: flex;
+  padding-top: 30px;
+  gap: 100px;
+}
+.intro-section .intro-container .text-content {
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.intro-section .intro-container .text-content .red-word {
+  color: #E41B21;
+}
+.intro-section .intro-container .text-content h1 {
+  white-space: nowrap;
+}
+.intro-section .intro-container .text-content h1 object {
+  display: block; /* Make SVG block-level element for proper alignment */
+  margin-top: 2px; /* Adjust as needed */
+  width: 90px; /* Adjust the width of the SVG */
+  height: auto; /* Let the height adjust proportionally */
+  padding-left: 67px;
+}
+.intro-section .intro-container .text-content p {
+  line-height: 38px;
+  width: 80%;
+  margin-top: 0;
+}
+.intro-section .intro-container img {
+  width: 40%;
+}/*# sourceMappingURL=style.css.map */

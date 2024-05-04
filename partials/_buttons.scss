@@ -1,0 +1,33 @@
+/* Global button styling */
+.custom-button {
+    background: transparent;
+    display: inline-block;
+    cursor: pointer;
+    width: 182px;
+    height: 82px;
+    position: relative;
+    transition: transform 0.2s ease; 
+    background-image: url('img/svg/roedsky.svg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;
+    padding-bottom: 10px;
+    text-align: center;
+    @include flex-center;
+    text-decoration: none;
+
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    span {
+        color: rgb(255, 255, 255);
+        font-weight: 800;
+        font-size: 16px;
+        position: relative;
+        z-index: 1; 
+        display: block; 
+        padding-top: 25px;
+    }
+}
