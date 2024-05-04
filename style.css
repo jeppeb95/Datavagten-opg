@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Font variabler */
 /*Global text styling */
 h1 {
@@ -40,6 +41,10 @@ h1 {
   padding-top: 25px;
 }
 
+html {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Raleway", sans-serif;
   background: #01122C;
@@ -50,6 +55,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100vw;
 }
 header img {
   padding: 15px 0;
@@ -63,7 +69,7 @@ header img {
 }
 .intro-section .intro-container {
   display: flex;
-  padding-top: 30px;
+  padding-top: 50px;
   gap: 100px;
 }
 .intro-section .intro-container .text-content {
@@ -71,19 +77,23 @@ header img {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  position: relative;
 }
 .intro-section .intro-container .text-content .red-word {
   color: #E41B21;
+  position: relative;
+}
+.intro-section .intro-container .text-content .underline-svg {
+  position: absolute;
+  left: 0; /* Juster om nødvendigt */
+  right: 0; /* Juster om nødvendigt */
+  bottom: -35px; /* Juster afstanden under teksten */
+  width: 100%; /* Sikrer, at bredden passer med "red-word" elementet */
+  height: auto; /* Holder SVG skalerbar */
+  display: block;
 }
 .intro-section .intro-container .text-content h1 {
-  white-space: nowrap;
-}
-.intro-section .intro-container .text-content h1 object {
-  display: block; /* Make SVG block-level element for proper alignment */
-  margin-top: 2px; /* Adjust as needed */
-  width: 90px; /* Adjust the width of the SVG */
-  height: auto; /* Let the height adjust proportionally */
-  padding-left: 67px;
+  line-height: 60px;
 }
 .intro-section .intro-container .text-content p {
   line-height: 38px;
@@ -92,4 +102,36 @@ header img {
 }
 .intro-section .intro-container img {
   width: 40%;
+}
+
+@media only screen and (max-width: 1010px) {
+  .intro-section {
+    margin: 0 100px;
+  }
+  .intro-section .intro-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100vw;
+    padding-top: 0;
+  }
+  .intro-section .intro-container .text-content {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+  .intro-section .intro-container .text-content h1 {
+    padding: 0 10px;
+  }
+  .intro-section .intro-container img {
+    padding-bottom: 30px;
+  }
+  header a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header img {
+    width: 70%;
+  }
 }/*# sourceMappingURL=style.css.map */

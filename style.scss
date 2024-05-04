@@ -3,6 +3,10 @@
 @import 'partials/mixin';
 @import 'partials/buttons';
 
+html {
+    box-sizing: border-box;
+}
+
 
 body {
     font-family: $raleway;
@@ -12,6 +16,7 @@ body {
 
 header {
     @include flex-center;
+    width: 100vw;
 
     img {
         padding: 15px 0;
@@ -24,7 +29,7 @@ header {
 
     .intro-container {
         display: flex;
-        padding-top: 30px;
+        padding-top: 50px;
         gap: 100px;
 
         .text-content {
@@ -32,22 +37,25 @@ header {
             display: flex;
             justify-content: center;
             flex-direction: column;
+            position: relative;
 
             .red-word {
                 color: $roed;
+                position: relative; 
+            }
+            
+            .underline-svg {
+                position: absolute;
+                left: 0; /* Juster om nødvendigt */
+                right: 0; /* Juster om nødvendigt */
+                bottom: -35px; /* Juster afstanden under teksten */
+                width: 100%; /* Sikrer, at bredden passer med "red-word" elementet */
+                height: auto; /* Holder SVG skalerbar */
+                display: block;
             }
 
             h1 {
-                white-space: nowrap;
-
-                object {
-                    display: block;
-                    margin-top: 2px; 
-                    width: 90px;
-                    height: auto;
-                    padding-left: 67px;
-                }
-
+                line-height: 60px;
             }
 
      
@@ -67,10 +75,43 @@ header {
 
 
 // Mobil styling forside //
-@media only screen and (max-width: 1010px)  {
+@media only screen and (max-width: 1010px) {
     .intro-section {
+        margin: 0 100px;
         .intro-container {
             flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            width: 100vw;
+            padding-top: 0;
+
+            .text-content {
+                width: 100%;
+                text-align: center;
+                align-items: center;
+
+                h1 {
+                    padding: 0 10px;
+                }
+            }
+
+            img {
+                padding-bottom: 30px;
+            }
+
         }
     }
+
+    header {
+        a {
+            @include flex-center
+
+           
+        }
+
+        img {
+            width: 70%;
+        }
+    }
+      
 }
