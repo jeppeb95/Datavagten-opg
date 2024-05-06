@@ -12,6 +12,10 @@ body {
     font-family: $raleway;
     background: $baggrund;
     color: white;
+    overflow-x: hidden;
+    margin: 0;
+    overflow-x: hidden;
+
 }
 
 header {
@@ -46,11 +50,11 @@ header {
             
             .underline-svg {
                 position: absolute;
-                left: 0; /* Juster om nødvendigt */
-                right: 0; /* Juster om nødvendigt */
-                bottom: -35px; /* Juster afstanden under teksten */
-                width: 100%; /* Sikrer, at bredden passer med "red-word" elementet */
-                height: auto; /* Holder SVG skalerbar */
+                left: 0; 
+                right: 0;
+                bottom: -35px; 
+                width: 100%;
+                height: auto; 
                 display: block;
             }
 
@@ -114,4 +118,148 @@ header {
         }
     }
       
+}
+
+
+// Sky drop down //
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 999; 
+}
+
+#skyContainer {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    z-index: 9999;
+    background-image: url('img/svg/blaaskybg.svg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;
+
+    &.show {
+        display: flex;
+        animation: visSkyAnimation 0.5s ease forwards;
+    }
+
+    p {
+        width: 50%;
+        line-height: 26px;
+    }
+
+    .mobile-text {
+        display: none;
+    }
+
+    img {
+        position: absolute;
+        right: 10%;
+        bottom: 50px;
+        width: 240px;
+        padding: 40px 0;
+        padding-left: 50%;
+    }
+
+   h1, h2 {
+    text-align: center;
+   }
+}
+
+@keyframes visSkyAnimation {
+    0% {
+        top: -100%;
+    }
+    100% {
+        top: 0%;
+    }
+}
+
+
+// Mobil styling dropdown sky //
+@media only screen and (max-width: 1270px) {
+    #skyContainer {
+        h1 {
+            padding-top: 60px;
+        }
+
+        p {
+            width: 80%;
+        }
+    }
+    
+
+}
+
+@media only screen and (max-width: 870px) {
+    #skyContainer {
+        img {
+            display: none;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 670px) {
+    #skyContainer {
+        p {
+            width: 90% ;
+        }
+
+        .mobile-text {
+            display: block;
+        }
+
+        .desktop-text {
+            display: none;
+        }
+        
+    }
+}
+
+
+// Kategori sektion med skyerne //
+.kategori-section {
+    @include flex-center;
+    flex-direction: column;
+
+    img {
+        padding-top: 100px;
+        transform: scale(0.8);
+    }
+
+    h1, h2 {
+        margin: 0;
+    }
+
+   h2 {
+        padding-top: 10px;
+    }
+    h1 {
+        padding-top: 20px;
+    }
+
+    #roed-sky {
+        left: 10px;
+        top: 100px;
+    }
+
+    .kategori-container {
+        position: relative;
+    }
+
+
 }
