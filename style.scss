@@ -360,6 +360,10 @@ header {
     left: 15px;
     bottom: 20px;
 
+    a {
+        text-decoration: none;
+    }
+
     img {
         transition: filter 0.1s ease;
         &:hover {

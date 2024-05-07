@@ -382,6 +382,9 @@ header img {
   left: 15px;
   bottom: 20px;
 }
+.nav-knapper a {
+  text-decoration: none;
+}
 .nav-knapper img {
   transition: filter 0.1s ease;
 }
