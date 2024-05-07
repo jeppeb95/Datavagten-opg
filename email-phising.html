@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datavagten - Email phising</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"></head>
+<body>
+    <section class="email-phising-section">
+        <h1>Email Phising</h1>
+        <h2>Scenario</h2>
+        <p>Du åbner din e-mail og ser en besked, der angiveligt er fra din bank. Beskeden beder om, at du skal bekræfte dine bankoplysninger ved at klikke på et link og indtaste dine adgangskoder. 
+
+            <br><br>Hvad gør du?</p>
+
+            <div class="inbox">
+                <div class="email">
+                  <div class="email-header">
+                    <div class="from"><span>Din Bank</span> &lt;support@dinbank.dk&gt;</div>
+                    <div class="date">20. maj 2024</div>
+                  </div>
+                  <div class="email-body">
+                    <p>Kære kunde.</p>
+                    <p>Vi har desværre oplevet et forsøg på, at komme ind på din konto. Derfor har vi brug for din hjælp til at bekræfte dine kontoplysninger. Din sikkerhed er i højsædet.</p>
+                    <p>Klik venligst på linket nedenfor for at logge ind på din konto og bekræfte dine oplysninger.</p>
+                    <a href="#" id="confirm" onclick="confirmAction()">Bekræft dine oplysninger nu</a>
+                    <p>Hvis du har nogen spørgsmål eller bekymringer, er du velkommen til at kontakte mig direkte. Jeg sidder klar til at hjælpe dig.</p>
+                    <p>Med venlig hilsen.</p>
+                    <p>Jan Pedersen<br>Bankrådgiver<br>Din Bank</p>
+                    
+                  </div>
+                  <div class="email-footer">
+                    <button class="button reply" onclick="reply()">Besvar</button>
+                    <button class="button report" onclick="report()">Rapporter som spam</button>
+                    <button class="button close" onclick="closeEmail()">Luk</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="overlay-mail" id="overlay-mail"></div>
+
+            
+              <div id="popup" class="popup">
+                <div class="popup-content">
+                    <div class="vurdering-img">
+                    <img src="img/bevar-mail-img-glad.png" alt="Vurdering af valg illustration med smiley"></div>
+                    <h2>Du har valgt at rapportere e-mailen til spam...                    </h2>
+                    <p>Ved at rapportere e-mailen som spam har du truffet det rigtige valg. Ved at gøre dette hjælper du med at beskytte dig selv og andre mod phishing-forsøg. </p>
+                    <h3>Her er nogle ekstra råd til sikkerheden:</h3>
+                    <ul>
+                      <li>Vær opmærksom på e-mailopdateringer og meddelelser fra din e-mailudbyder. Mange e-mailudbydere sender advarsler om sikkerhedsrisici eller mistænkelig aktivitet på dine konti. Tag disse advarsler alvorligt og reager hurtigt for at beskytte din konto.</li>
+                      <li>Del din viden med andre om phishing-trusler. Ved at oplyse andre om, hvordan man genkender og undgår phishing-forsøg, kan du hjælpe med at beskytte hele dit netværk. Så del endelig dine erfaringer med kolleger, venner og familie for at styrke sikkerheden for alle.</li>
+                      <li>Vær forsigtig med vedhæftede filer og links. Undgå at klikke på eller downloade filer fra ukendte afsendere, da de kan indeholde skadelig software. Hold musen over links for at kontrollere URL'en, før du klikker på dem.</li>
+                    </ul>
+                  </div>
+                  <button class="button close" onclick="closePopup()">Prøv igen</button>
+                  <a href="traening.html" id="forside-knap">Til forsiden</a>
+                </div>
+              </div>
+            
+            <div id="popup2" class="popup">
+              <div class="popup-content">
+                <div class="vurdering-img">
+                <img src="img/bevar-mail-img.png" alt="Vurdering af valg illustration med smiley"></div>
+                <h2>Du har valgt at besvare e-mailen...</h2>
+                <p>Du har ikke valgt helt rigtigt, men du er heller ikke gået direkte i fælden. Det er vigtigt at være forsigtig med at besvare e-mails, især hvis de beder om personlige oplysninger.</p>
+                <p>Det sikre valg ville være at rapportere mailen som spam. På den måde vil du ikke kunne modtage fra denne afsender igen.</p>
+                <h3>Her er nogle yderligere råd:</h3>
+                <ul>
+                  <li>Undersøg afsenderens e-mailadresse nøje. Vær opmærksom på små variationer eller ukendte domæner, der kan indikere en falsk e-mail - sammenlign gerne med tidligere afsendere, som du ved har været ægte.</li>
+                  <li>Kontroller eventuelle stavefejl eller grammatiske fejl i e-mailen, da mange phishing-e-mails har disse tegn.</li>
+                  <li>Hvis e-mailen ser mistænkelig ud, skal du kontakte virksomheden direkte via deres officielle kontaktmetoder og få bekræftet at det er ægte.</li>
+                </ul>
+              </div>
+              <button class="button close" onclick="closePopup2()">Prøv igen</button>
+              <a href="traening.html" id="forside-knap">Til forsiden</a>
+            </div>
+
+            <div id="popup3" class="popup">
+                <div class="popup-content">
+                  <div class="vurdering-img">
+                  <img src="img/bevar-mail-img-delvis-glad.png" alt="Vurdering af valg illustration med smiley"></div>
+                  <h2>Du har valgt at lukke e-mailen...
+                    </h2>
+                  <p>Når du vælger at lukke e-mailen, har du valgt delvist rigtigt. Det er vigtigt at undgå yderligere interaktion med mistænkelige e-mails for at minimere risikoen for phising. Men for at være helt på den sikre side, anbefaler vi at du rapporterer mailen som spam.</p>
+                  <h3>Her er nogle ekstra råd til at forbedre din e-mail-sikkerhed:</h3>
+                  <ul>
+                    <li>Gennemgå din e-mailklient og dens indbyggede sikkerhedsfunktioner. Disse funktioner kan advare dig om potentielt skadelige e-mails og beskytte dig mod phishing-angreb.</li>
+                    <li>Opdater din e-mailsoftware og dit styresystem jævnligt. Sørg for at installere de nyeste sikkerhedsopdateringer for at beskytte dig mod nye trusler.</li>
+                    <li>Aktiver tofaktorgodkendelse på dine konti. Det tilføjer et ekstra sikkerhedslag ved at kræve en bekræftelsesmetode ud over din almindelige adgangskode, hvilket gør det sværere for svindlerne at få adgang til dine konti.</li>
+                  </ul>
+                </div>
+                <button class="button close" onclick="closePopup3()">Prøv igen</button>
+                <a href="traening.html" id="forside-knap">Til forsiden</a>
+              </div>
+              
+
+              <div id="popup4" class="popup">
+                <div class="popup-content">
+                    <div class="vurdering-img">
+                    <img src="img/bevar-mail-img-sur.png" alt="Vurdering af valg illustration med smiley"></div>
+                    <h2>Du har valgt at klikke på linket i e-mailen...                   </h2>
+                    <p>Når du klikker på linket i e-mailen, er du gået direkte i fælden. Disse links kan føre til phishing-websteder, der forsøger at stjæle dine personlige oplysninger. For at undgå at falde i disse fælder, kan du med fordel følge de nedenstående råd og dermed minimere risikoen for at blive offer for phising angreb i fremtiden.
+                    </p>
+                    <h3>Her er nogle ekstra råd til sikkerheden:</h3>
+                    <ul>
+                      <li>Hold musen over linket for at se den reelle webadresse, før du klikker på det. Tjek om adressen stemmer overens med den forventede URL.
+                    </li>
+                      <li>Brug aldrig links i e-mails til at logge ind på dine konti. Indtast webadressen manuelt i din browser.
+                    </li>
+                      <li>Vær opmærksom på advarsler fra din browser eller antivirussoftware. Tag advarsler om mistænkelige websteder alvorligt.
+                    </li>
+                    <li>Tjek e-mailadressen nøje. Vær opmærksom på små variationer eller ukendte domæner.
+                    </li>
+                    <li>Undersøg e-mailens sprog og indhold. Vær skeptisk over for stavefejl eller mekanisk tone.</li>
+                    </ul>
+                  </div>
+                  <button class="button close" onclick="closePopup4()">Prøv igen</button>
+                  <a href="traening.html" id="forside-knap">Til forsiden</a>
+                </div>
+              </div>
+            
+
+
+    </section>
+
+    <div class="nav-knapper">
+        <a href="traening.html">
+            <img src="img/svg/pil.svg" alt="Tilbage knap">
+        </a>
+        <a href="index.html">
+            <img src="img/svg/hus.svg" alt="Hus - gå til forside knap">
+        </a>
+    </div>
+
+    <div class="simpel-logo">
+        <a href="index.html">
+        <img src="img/svg/logo-simpel.svg" alt="Logo">
+    </a>
+    </div>
+
+    <script src="js/mail.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datavagten - Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"></head>
+<body>
+    <section class="email-phising-section" id="quiz-section">
+        <div id="quiz-container" class="container">
+            <h1>Velkommen til phising-quizzen</h1>
+            <p>Denne quiz afprøver den viden, som du er blevet introduceret til gennem de forskellige træningsscenarier på vores side.<br><br>Er du klar til at prøve?
+            </p>
+            <img src="img/quizimg.png" alt="Quiz illustration med spørgsmålstegn" id="quiz-img">
+            <button id="start-button" onclick="startQuiz()">Start quiz</button>
+          </div>
+        
+          <div id="quiz" class="container" style="display: none;">
+            <div id="question"></div>
+            <div id="options" class="options-container"></div>
+            <div id="feedback" class="feedback"></div>
+            <button id="next-button" onclick="nextQuestion()">Næste spørgsmål</button>
+          </div>
+        
+          <div id="result" class="container" style="display: none;">
+            <h1>Dit resultat</h1>
+            <div id="score"></div>
+            <div class="button-container">
+            <button id="start-button" onclick="tryAgain()">Prøv igen</button>
+            <a href="traening.html">Til forsiden</a>
+        </div>
+          </div>
+    </section>
+    
+
+    <div class="nav-knapper">
+        <a href="traening.html">
+            <img src="img/svg/pil.svg" alt="Tilbage knap">
+        </a>
+        <a href="index.html">
+            <img src="img/svg/hus.svg" alt="Hus - gå til forside knap">
+        </a>
+    </div>
+
+    <div class="simpel-logo">
+        <a href="index.html">
+        <img src="img/svg/logo-simpel.svg" alt="Logo">
+    </a>
+    </div>
+
+    <script src="js/quiz.js"></script>
+</body>
+</html>

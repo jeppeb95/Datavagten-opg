@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datavagten - SMS phising</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"></head>
+<body>
+    <section class="email-phising-section" id="smishing-section">
+<h1>SMS Phising</h1>
+<div class="smishing-container">
+  <div id="scenario1" class="scenario">
+    <h2>Scenario 1</h2>
+    <p>Du modtager en SMS fra din bank, der informerer dig om mistænkelig aktivitet på din konto. Du bliver bedt om at klikke på et link for at låse din konto. <br><br>Hvad gør du?</p>
+
+    <img src="img/sms2.png" alt="Scenario 1 SMS">
+    <div class="button-container">
+        <button onclick="handleChoice('scenario1', 'click')" class="choice-btn">Klik på linket</button>
+        <button onclick="handleChoice('scenario1', 'ignore')" class="choice-btn">Ignorer beskeden</button>
+        <button onclick="handleChoice('scenario1', 'reply')" class="choice-btn">Svar på beskeden</button>
+        <button onclick="handleChoice('scenario1', 'call')" class="choice-btn">Ring til banken</button>
+    </div>
+  </div>
+
+  <div class="seperator"></div>
+  
+  <div id="scenario2" class="scenario">
+    <h2>Scenario 2</h2>
+    <p>Du modtager en SMS, der fortæller, at du har vundet en iPhone 15. Du skal blot klikke på et link og bekræfte din identitet.<br><br>Hvad gør du?</p>
+
+    <img src="img/sms1.png" alt="Scenario 2 SMS">
+    <div class="button-container">
+        <button onclick="handleChoice('scenario2', 'click')" class="choice-btn">Klik på linket</button>
+        <button onclick="handleChoice('scenario2', 'ignore')" class="choice-btn">Ignorer beskeden</button>
+        <button onclick="handleChoice('scenario2', 'reply')" class="choice-btn">Svar på beskeden</button>
+        <button onclick="handleChoice('scenario2', 'report')" class="choice-btn">Rapporter som spam</button>
+    </div>
+  </div>
+  <div class="seperator"></div>
+
+  <div id="scenario3" class="scenario">
+    <h2>Scenario 3</h2>
+    <p>Du modtager en SMS fra Netflix, der informerer dig om, at der er blevet logget ind på din enhed fra en ikke-genkendt konto i Odense. Du bliver bedt om at logge manuelt ind på Netflix for at ændre din adgangskode. <br><br>Hvad gør du?</p>
+
+    <img src="img/SMS3.png" alt="Scenario 3 SMS">
+    <div class="button-container">
+        <button onclick="handleChoice('scenario3', 'click')" class="choice-btn">Gå til Netflix-app</button>
+        <button onclick="handleChoice('scenario3', 'ignore')" class="choice-btn">Ignorer beskeden</button>
+        <button onclick="handleChoice('scenario3', 'reply')" class="choice-btn">Svar på beskeden</button>
+        <button onclick="handleChoice('scenario3', 'call')" class="choice-btn">Ring til kundeservice</button>
+    </div>
+  </div>
+
+  <div id="finalFeedback">
+      <h2>Resultat & feedback</h2>
+      <div id="feedback"></div>
+      <button onclick="resetScenarios()" id="provigen-knap">Prøv igen</button>
+      <a href="traening.html" id="forside-knap">Til forsiden</a>
+  </div>
+</div>
+
+    </section>
+
+    <div class="nav-knapper">
+        <a href="traening.html">
+            <img src="img/svg/pil.svg" alt="Tilbage knap">
+        </a>
+        <a href="index.html">
+            <img src="img/svg/hus.svg" alt="Hus - gå til forside knap">
+        </a>
+    </div>
+
+    <div class="simpel-logo">
+        <a href="index.html">
+        <img src="img/svg/logo-simpel.svg" alt="Logo">
+    </a>
+    </div>
+
+    <script src="js/smishing.js"></script>
+</body>
+</html>

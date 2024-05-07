@@ -30,6 +30,8 @@ header {
 .intro-section {
     @include flex-center;
     flex-direction: column;
+    padding-bottom: 20px;
+
 
     .intro-container {
         display: flex;
@@ -247,9 +249,12 @@ header {
 
    h2 {
         padding-top: 10px;
+        text-align: center;
+        padding: 0 10px;
     }
     h1 {
         padding-top: 20px;
+        text-align: center;
     }
 
     #roed-sky {
@@ -257,9 +262,696 @@ header {
         top: 100px;
     }
 
+    #gul-sky {
+        left: 225px;
+        top: 180px;
+        background-image: url('img/svg/gul-sky.svg');
+        width: 200px;
+        height: 145px;
+    }
+    
+    #groen-sky {
+        left: 375px;
+        top: 40px;
+        background-image: url('img/svg/groen-sky.svg');
+        width: 230px;
+        height: 165px;
+    }
+
+    #blaa-sky {
+        left: 730px;
+        top: 140px;
+        background-image: url('img/svg/blaa-sky.svg');
+        width: 220px;
+        height: 155px;
+    }
+
     .kategori-container {
         position: relative;
     }
 
+    #bund-mobil {
+        display: none;
+        transform: scale(1.1);
+        padding-top: 200px;
+    }
+
+
+}
+
+// Mobil styling af Kategori sektion med skyerne //
+@media only screen and (max-width: 962px) {
+    .kategori-section {
+        #bund-desktop {
+            display: none;
+        }
+
+        #bund-mobil {
+            display: block;
+        }
+
+        #roed-sky {
+            left: -84px;
+            top: 130px;
+            width: 150px;
+        }
+
+        #gul-sky {
+            left: -44px;
+            top: 230px;
+            background-image: url('img/svg/gul-sky.svg');
+            width: 150px;
+            height: 137px;
+        }
+
+        #groen-sky {
+            left: 29px;
+            top: 65px;
+            background-image: url('img/svg/groen-sky.svg');
+            width: 150px;
+            height: 137px;
+        }
+
+        #blaa-sky {
+            left: 130px;
+            top: 170px;
+            background-image: url('img/svg/blaa-sky.svg');
+            width: 150px;
+            height: 137px;
+        }
+
+        h1 {
+            font-size: 26px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+    
+
+
+}
+}
+
+// Navigation styling global //
+.nav-knapper {
+    position: fixed;
+    left: 15px;
+    bottom: 20px;
+
+    img {
+        transition: filter 0.1s ease-in;
+        &:hover {
+            filter: brightness(0) saturate(100%) invert(14%) sepia(82%) saturate(4873%) hue-rotate(351deg) brightness(99%) contrast(92%);
+        }
+    }
+}
+
+
+
+.simpel-logo {
+    position: fixed;
+    right: 15px;
+    bottom: 20px;
+}
+
+// Mobil nav //
+@media only screen and (max-width: 962px) {
+    .nav-knapper {
+        background-color: rgba(0, 0, 0, 0.708);
+        border-radius: 20px;
+        padding: 5px;
+
+        img {
+            height: 45px;
+        }
+    }
+
+    .simpel-logo {
+        display: none;
+    }
+
+}
+
+
+// Email phising scenario //
+.email-phising-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1, h2, p {
+        text-align: center;
+    }
+
+    h2 {
+        color: $roed;
+    }
+
+    p {
+        width: 50%;
+    }
+
+    .inbox {
+        width: 600px;
+        margin: 20px auto;
+        color: black;
+        font-family: Arial, sans-serif;
+
+
+      
+        .email {
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          overflow: hidden;
+      
+          .email-header {
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-bottom: 1px solid #ddd;
+      
+            .from {
+              font-weight: bold;
+              
+              span {
+                font-style: italic;
+              }
+            }
+      
+            .date {
+              font-size: 12px;
+              color: #666;
+            }
+          }
+      
+          .email-body {
+            padding: 15px;
+            background: #f4f4f4;
+      
+            p {
+                width: 100%;
+                text-align: left;
+              &:not(:last-child) {
+                margin-bottom: 10px;
+              }
+            }
+      
+            a {
+              color: #007bff;
+              text-decoration: none;
+              transition: color 0.3s ease-in-out;
+      
+              &:hover {
+                color: #0056b3;
+              }
+            }
+          }
+      
+          .email-footer {
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-top: 1px solid #ddd;
+            text-align: right;
+      
+            .button {
+              display: inline-block;
+              padding: 8px 15px;
+              background-color: $roed;
+              color: #fff;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+              margin-left: 5px;
+              transition: background-color 0.3s ease-in-out;
+      
+              &:hover {
+                background-color: #620000;
+              }
+            }
+          }
+        }
+      }
+      
+      .popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        z-index: 9999;
+        display: none;
+        line-height: 23px;
+        color: black;
+        font-family: Arial, sans-serif;
+
+        p {
+            width: 100%;
+            text-align: left;
+        }
+        li {
+          padding-bottom: 10px;
+        }
+
+        .vurdering-img {
+            @include flex-center;
+        }
+
+        h2 {
+            font-weight: 700;
+            text-align:  left;
+            color: black;
+        }
+
+        .button, #forside-knap{
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: $roed;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 5px;
+            transition: background-color 0.3s ease-in-out;
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 1;
+    
+            &:hover {
+              background-color: #620000;
+            }
+          }
+      }
+
+      #confirm {
+        text-decoration: underline;
+      }
+
+      .overlay-mail {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.75); 
+        display: none;
+        z-index: 999;
+    }
+    
+}
+
+ // Email phising mobil //
+ @media only screen and (max-width: 868px) {
+    .email-phising-section {
+        padding-bottom: 100px;
+        .inbox {
+            width: 90%;
+        }
+
+        p {
+            width: 95%;
+        }
+
+        .popup {
+            overflow-y: auto;
+            height: 90vh;
+            img {
+                width: 100%;
+                min-width: 280px;
+            }
+        }
+    }
+    
+ }
+
+
+ // Smishing section //
+ #smishing-section {
+    padding-bottom: 100px;
+    
+    h2 {
+      color: $gul;
+    }
+  
+    .smishing-container {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .scenario {
+      border: 1px solid $gul;
+      margin-bottom: 30px;
+      margin-top: 30px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      
+      img {
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+        max-width: 600px;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        border: 1px solid rgb(207, 207, 207);
+      }
+      
+      p {
+        font-size: 16px;
+        margin-bottom: 10px;
+        text-align: center;
+        width: 100%;
+        padding-bottom: 25px;
+      }
+    }
+    
+    .button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      
+      
+    }
+
+    button, #forside-knap {
+        flex: 1;
+        max-width: 150px;
+        color: $baggrund;
+        background-color: $gul;
+        padding: 10px 20px;
+        margin-right: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-family: $raleway;
+        font-weight: 600;
+        font-size: 14px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        
+        &:hover {
+          background-color: #f8f415;
+          
+        }
+        
+        &.selected {
+          background-color: #fff719;
+        }
+      }
+    
+    #finalFeedback {
+      margin-top: 20px;
+      text-align: left;
+      display: none;
+      
+      #feedback {
+        border: solid 1px $gul;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 10px;
+        
+        p {
+          width: 100%;
+        }
+        
+        h4 {
+          margin-top: 0;
+          margin-bottom: 20px;
+          color: $gul;
+          text-align: center;
+        }
+        
+        h3 {
+          display: none;
+        }
+        
+        ul {
+          padding-left: 20px;
+          text-align: center;
+          
+          li {
+            margin-bottom: 25px;
+          }
+        }
+      }
+    }
+    
+    .seperator {
+      left: 0;
+      width: 100vw;
+      height: 1px;
+      background: white;
+      
+    }
+
+    .smishing-h4 {
+        padding-top: 50px;
+    }
+  }
+
+  // Smishing mobil styling //
+  @media only screen and (max-width: 620px) {
+    #smishing-section {
+        .smishing-container {
+            width: 90%;
+        }
+
+        .button-container {
+            flex-direction: column;
+        }
+
+        .scenario {
+            img {
+                width: 80%;
+            }
+
+            .choice-btn {
+                min-width: 200px;
+            }
+        }
+
+    }
+  }
+
+
+  //Styling af SOME phising //
+  #some-section {
+    padding-bottom: 90px;
+    .scenario, .feedback {
+        @include flex-center;
+        flex-direction: column;
+        border: solid 1px $groen;
+        border-radius: 20px;
+        width: 70vw;
+
+        p {
+            width: 100%;
+        }
+
+        h2 {
+            color: $groen;
+        }
+
+        img {
+            width: 400px;
+            padding-top: 15px;
+        }
+
+        .button-wrapper {
+            padding: 20px 0;
+            @include flex-center;
+        }
+
+        button {
+        max-width: 185px;
+        min-height: 52px;
+        color: $baggrund;
+        background-color: $groen;
+        padding: 10px 20px;
+        margin-right: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-family: $raleway;
+        font-weight: 600;
+        font-size: 14px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: #21ff64;
+            
+          }
+        }
+    }
+
+    .result-h2 {
+        font-size:28px;
+        font-weight: 800;
+    }
+
+    .feedback {
+        padding: 5px;
+        @include flex-center;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .h2-feed {
+        padding-top: 50px;
+    }
+
+    ul {
+        padding-bottom: 30px;
+
+        li {
+            padding-bottom: 15px;
+        }
+    }
+
+    #scenario-container {
+        @include flex-center;
+    }
+  }
+
+  // Styling af SOME phising mobil //
+  @media only screen and (max-width: 860px) {
+    #some-section {
+        .scenario {
+            width: 90vw;
+
+            img {
+                width: 90%;
+            }
+
+            p {
+                width: 95%;
+            }
+        }
+
+        .button-wrapper {
+            flex-direction: column;
+            gap: 10px;
+
+            button {
+                max-width: 220px;
+                width: 220px;
+                height: 50px;
+            }
+        }
+
+        .feedback {
+            width:95%;
+        }
+
+        #feedbackContent {
+            width: 100%;
+        }
+    }
+
+
+  }
+
+  // Styling af quiz //
+  #quiz-section {
+    .container {
+      width: 65vw;
+      margin: 50px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      text-align: center;
+      @include flex-center;
+      flex-direction: column;
+
+      p {
+        width: 80%;
+      }
+
+      h1 {
+        color: $blaa;
+      }
+
+      #quiz-img {
+        width: 600px;
+        padding-bottom: 30px;
+      }
+
+      button, a {
+        display: inline-block;
+        width: 250px;
+        height: 52px;
+        color: $baggrund;
+        background-color: $blaa;
+        margin-right: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-family: $raleway;
+        font-weight: 600;
+        font-size: 14px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        color: white;
+
+        &:hover {
+            background-color: #013d37;
+            
+          }
+        }  
+
+        a {
+            @include flex-center;
+        }
+
+        .options-container {
+            padding: 30px 0;
+            @include flex-center;
+        }
+
+        #question {
+            padding: 15px;
+        }
+
+        .feedback {
+            padding-bottom: 20px;
+        }
+
+        #score {
+            padding-bottom: 30px;
+        }
+
+        .button-container {
+            @include flex-center;
+        }
+        
+      }
+}
+
+// Styling af quiz mobil //
+@media only screen and (max-width: 860px) {
+    #quiz-section {
+        .container {
+            width: 85%;
+            #quiz-img  {
+                width: 100%;
+            }
+
+            .options-container {
+                flex-direction: column;
+                gap: 15px;
+                padding-bottom: 80px;
+            }
+        }
+        
+    }
 
 }

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datavagten - SMS phising</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"></head>
+<body>
+    <section class="email-phising-section" id="some-section">
+        <h1>Social Media Phishing</h1>
+        <div id="scenario-container">
+            <div class="scenario" id="scenario1">
+                <h2>Scenario 1</h2>
+                <p>Du er på Facebook, og du støder på et opslag, der lover en gratis telefon i en annonce. <br><br>Hvordan vil du reagere?</p>
+                <img src="img/some1.png" alt="Yousee Facebook kampagne">
+                <div class="button-wrapper">
+                    <button onclick="chooseInteraction('click')">Klik på linket og deltag</button>
+                    <button onclick="chooseInteraction('report')">Rapportér opslaget</button>
+                    <button onclick="chooseInteraction('ignore')">Ignorér opslaget</button>
+                </div>
+            </div>
+            <div class="scenario" id="scenario2" style="display: none;">
+                <h2>Scenario 2</h2>
+                <p>Du modtager en venneanmodning fra en person, du allerede mener at være venner med. <br><br>Hvad vil du gøre?</p>
+                <img src="img/fbanmodning.png" alt="Facebook venneanmodning">
+                <div class="button-wrapper">
+                    <button onclick="chooseInteraction('accept')">Acceptér anmodningen</button>
+                    <button onclick="chooseInteraction('report')">Rapportér profilen</button>
+                    <button onclick="chooseInteraction('ignore')">Ignorér anmodningen</button>
+                </div>
+            </div>
+            <div class="scenario" id="scenario3" style="display: none;">
+                <h2>Scenario 3</h2>
+                <p>Du modtager en besked på Messenger fra en ven, der beder dig om at klikke på et link for at hjælpe med et givent formål. <br><br>Hvad vil du gøre?</p>
+                <img src="img/messengerbesked.png" alt="Facebook messenger besked">
+                <div class="button-wrapper">
+                    <button onclick="chooseInteraction('click')">Klik på linket for at hjælpe din ven</button>
+                    <button onclick="chooseInteraction('contact')">Kontakt din ven uden at klikke på linket</button>
+                    <button onclick="chooseInteraction('report')">Rapportér beskeden som mistænkelig</button>
+                </div>
+            </div>
+            <div class="feedback" id="feedback" style="display: none;">
+                <h2 class="result-h2">Resultat & feedback</h2>
+                <div id="feedbackContent"></div>
+                <button onclick="tryAgain()">Prøv igen</button>
+                <button onclick="goToHome()">Tilbage til forsiden</button>
+            </div>
+        </div>
+    </section>
+    
+
+    <div class="nav-knapper">
+        <a href="traening.html">
+            <img src="img/svg/pil.svg" alt="Tilbage knap">
+        </a>
+        <a href="index.html">
+            <img src="img/svg/hus.svg" alt="Hus - gå til forside knap">
+        </a>
+    </div>
+
+    <div class="simpel-logo">
+        <a href="index.html">
+        <img src="img/svg/logo-simpel.svg" alt="Logo">
+    </a>
+    </div>
+
+    <script src="js/some.js"></script>
+</body>
+</html>
