@@ -302,6 +302,7 @@ header {
 // Mobil styling af Kategori sektion med skyerne //
 @media only screen and (max-width: 962px) {
     .kategori-section {
+        padding-bottom: 100px;
         #bund-desktop {
             display: none;
         }
@@ -360,9 +361,9 @@ header {
     bottom: 20px;
 
     img {
-        transition: filter 0.1s ease-in;
+        transition: filter 0.1s ease;
         &:hover {
-            filter: brightness(0) saturate(100%) invert(14%) sepia(82%) saturate(4873%) hue-rotate(351deg) brightness(99%) contrast(92%);
+            filter: brightness(0) saturate(100%) invert(24%) sepia(83%) saturate(5513%) hue-rotate(204deg) brightness(91%) contrast(101%);
         }
     }
 }
@@ -524,7 +525,7 @@ header {
             color: black;
         }
 
-        .button, #forside-knap{
+        .button, #forside-knap, #forside-knap1, #forside-knap2, #forside-knap3{
             display: inline-block;
             padding: 8px 15px;
             background-color: $roed;

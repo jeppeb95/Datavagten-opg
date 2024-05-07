@@ -335,6 +335,9 @@ header img {
 }
 
 @media only screen and (max-width: 962px) {
+  .kategori-section {
+    padding-bottom: 100px;
+  }
   .kategori-section #bund-desktop {
     display: none;
   }
@@ -380,10 +383,10 @@ header img {
   bottom: 20px;
 }
 .nav-knapper img {
-  transition: filter 0.1s ease-in;
+  transition: filter 0.1s ease;
 }
 .nav-knapper img:hover {
-  filter: brightness(0) saturate(100%) invert(14%) sepia(82%) saturate(4873%) hue-rotate(351deg) brightness(99%) contrast(92%);
+  filter: brightness(0) saturate(100%) invert(24%) sepia(83%) saturate(5513%) hue-rotate(204deg) brightness(91%) contrast(101%);
 }
 
 .simpel-logo {
@@ -516,7 +519,7 @@ header img {
   text-align: left;
   color: black;
 }
-.email-phising-section .popup .button, .email-phising-section .popup #forside-knap {
+.email-phising-section .popup .button, .email-phising-section .popup #forside-knap, .email-phising-section .popup #forside-knap1, .email-phising-section .popup #forside-knap2, .email-phising-section .popup #forside-knap3 {
   display: inline-block;
   padding: 8px 15px;
   background-color: #E41B21;
@@ -530,7 +533,7 @@ header img {
   font-size: 14px;
   line-height: 1;
 }
-.email-phising-section .popup .button:hover, .email-phising-section .popup #forside-knap:hover {
+.email-phising-section .popup .button:hover, .email-phising-section .popup #forside-knap:hover, .email-phising-section .popup #forside-knap1:hover, .email-phising-section .popup #forside-knap2:hover, .email-phising-section .popup #forside-knap3:hover {
   background-color: #620000;
 }
 .email-phising-section #confirm {

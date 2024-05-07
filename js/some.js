@@ -83,5 +83,5 @@ function tryAgain() {
 }
 
 function goToHome() {
-  window.location.href = "index.html";
+  window.location.href = "traening.html";
 }
