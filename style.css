@@ -504,6 +504,8 @@ header img {
   line-height: 23px;
   color: black;
   font-family: Arial, sans-serif;
+  overflow-y: auto;
+  height: 70vh;
 }
 .email-phising-section .popup p {
   width: 100%;

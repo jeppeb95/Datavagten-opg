@@ -510,6 +510,8 @@ header {
         line-height: 23px;
         color: black;
         font-family: Arial, sans-serif;
+        overflow-y: auto;
+        height: 70vh;
 
         p {
             width: 100%;
